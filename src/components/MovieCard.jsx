@@ -8,7 +8,7 @@ const MovieCard = ({ movie, bookmarked, onBookmark }) => {
 
   // API mengembalikan field: poster_url (path relatif)
   const poster = storageUrl(movie.poster_url || movie.poster)
-    || `https://placehold.co/300x450/1a1a2e/e94560?text=${encodeURIComponent(movie.title)}`
+    || `https://placehold.co/300x450/1a1a2e/2563eb?text=${encodeURIComponent(movie.title)}`
 
   return (
     <div className="movie-card" onClick={() => navigate(`/movie/${movie.id}`)}>
@@ -18,7 +18,7 @@ const MovieCard = ({ movie, bookmarked, onBookmark }) => {
           alt={movie.title}
           loading="lazy"
           onError={(e) => {
-            e.target.src = `https://placehold.co/300x450/1a1a2e/e94560?text=${encodeURIComponent(movie.title)}`
+            e.target.src = `https://placehold.co/300x450/1a1a2e/2563eb?text=${encodeURIComponent(movie.title)}`
           }}
         />
         <div className="movie-card__overlay">

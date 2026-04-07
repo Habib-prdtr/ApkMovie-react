@@ -41,7 +41,7 @@ const Trending = () => {
           <BsArrowLeft size={20} />
         </button>
         <div className="page-header__title">
-          <MdTrendingUp size={24} color="#e94560" />
+          <MdTrendingUp size={24} color="var(--accent)" />
           <h2>Trending</h2>
         </div>
       </header>

@@ -81,7 +81,7 @@ const WatchMovie = () => {
           </div>
           <button className="wpv2-circle-btn" onClick={handleBookmark}>
             {isBookmarked
-              ? <BsBookmarkFill size={18} color="#e94560" />
+              ? <BsBookmarkFill size={18} color="var(--accent)" />
               : <BsBookmarkPlus size={18} />}
           </button>
         </div>
@@ -102,7 +102,7 @@ const WatchMovie = () => {
           </div>
           <button className="wpv2-share-btn" onClick={handleBookmark}>
             {isBookmarked
-              ? <BsBookmarkFill size={20} color="#e94560" />
+              ? <BsBookmarkFill size={20} color="var(--accent)" />
               : <BsBookmarkPlus size={20} />}
           </button>
         </div>
@@ -148,7 +148,7 @@ const WatchMovie = () => {
             <div className="wpv2-rec-list">
               {recommendations.map((m) => {
                 const mPoster = storageUrl(m.poster_url || m.poster)
-                  || `https://placehold.co/100x140/12121f/e94560?text=${encodeURIComponent(m.title)}`
+                  || `https://placehold.co/100x140/12121f/2563eb?text=${encodeURIComponent(m.title)}`
                 const mYear = m.release_date ? m.release_date.slice(0, 4) : (m.year || "")
                 return (
                   <div
@@ -161,7 +161,7 @@ const WatchMovie = () => {
                         src={mPoster}
                         alt={m.title}
                         onError={(e) => {
-                          e.target.src = `https://placehold.co/100x140/12121f/e94560?text=${encodeURIComponent(m.title)}`
+                          e.target.src = `https://placehold.co/100x140/12121f/2563eb?text=${encodeURIComponent(m.title)}`
                         }}
                       />
                       <div className="wpv2-rec-item__play-icon">

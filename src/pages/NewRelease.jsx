@@ -41,7 +41,7 @@ const NewRelease = () => {
           <BsArrowLeft size={20} />
         </button>
         <div className="page-header__title">
-          <MdNewReleases size={24} color="#e94560" />
+          <MdNewReleases size={24} color="var(--accent)" />
           <h2>Rilis Terbaru</h2>
         </div>
       </header>

@@ -1,6 +1,8 @@
 import axios from "axios"
 
-export const BASE_URL = "http://localhost:8000"
+// Ganti dengan IP Address laptop kamu (contoh: 192.168.x.x atau 172.x.x.x)
+// Pastikan laptop dan HP/Emulator berada di jaringan WiFi yang sama
+export const BASE_URL = "http://172.41.1.13:8000" // <-- Sesuaikan IP ini
 
 /** Bangun URL lengkap dari path relatif public Laravel
  *  File disimpan ke public_path('movies') → URL: /movies/xxx

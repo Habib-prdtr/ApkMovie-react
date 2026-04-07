@@ -23,7 +23,7 @@ const Bookmark = () => {
     <div className="page">
       <header className="page-header">
         <div className="page-header__title">
-          <BsBookmarkFill size={22} color="#e94560" />
+          <BsBookmarkFill size={22} color="var(--accent)" />
           <h2>Tersimpan</h2>
         </div>
       </header>

@@ -54,7 +54,7 @@ const Splash = () => {
         </div>
         <div className="splash__content">
           <div className="splash__logo">
-            <BsFillPlayFill size={48} color="#e94560" />
+            <BsFillPlayFill size={48} color="var(--accent)" />
             <h1>CineStream</h1>
           </div>
           <p className="splash__tagline">Temukan, Tonton, dan Nikmati Ribuan Film Terbaik</p>
@@ -77,7 +77,7 @@ const Splash = () => {
         <div className="splash__bg"><div className="splash__gradient" /></div>
         <div className="auth-card">
           <div className="auth-card__header">
-            <BsFillPlayFill size={36} color="#e94560" />
+            <BsFillPlayFill size={36} color="var(--accent)" />
             <h2>Selamat Datang Kembali</h2>
             <p>Masuk untuk melanjutkan menonton</p>
           </div>
@@ -128,7 +128,7 @@ const Splash = () => {
       <div className="splash__bg"><div className="splash__gradient" /></div>
       <div className="auth-card">
         <div className="auth-card__header">
-          <BsFillPlayFill size={36} color="#e94560" />
+          <BsFillPlayFill size={36} color="var(--accent)" />
           <h2>Buat Akun Baru</h2>
           <p>Bergabung dan nikmati semua fitur</p>
         </div>

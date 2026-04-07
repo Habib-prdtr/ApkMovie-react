@@ -58,7 +58,7 @@ const Home = () => {
 
   // API field: poster_url (path relatif storage)
   const heroPoster = storageUrl(heroMovie?.poster_url || heroMovie?.poster)
-    || `https://placehold.co/800x400/0f0f23/e94560?text=${encodeURIComponent(heroMovie?.title || 'CineStream')}`
+    || `https://placehold.co/800x400/0f0f23/2563eb?text=${encodeURIComponent(heroMovie?.title || 'CineStream')}`
 
   const heroYear = heroMovie?.release_date
     ? heroMovie.release_date.slice(0, 4)
@@ -94,7 +94,7 @@ const Home = () => {
             src={heroPoster}
             alt={heroMovie.title}
             className="hero-banner__img"
-            onError={(e) => { e.target.src = `https://placehold.co/800x400/0f0f23/e94560?text=${encodeURIComponent(heroMovie.title)}` }}
+            onError={(e) => { e.target.src = `https://placehold.co/800x400/0f0f23/2563eb?text=${encodeURIComponent(heroMovie.title)}` }}
           />
           <div className="hero-banner__overlay">
             <span className="hero-banner__badge">🔥 Trending</span>

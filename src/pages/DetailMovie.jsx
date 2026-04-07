@@ -71,7 +71,7 @@ const DetailMovie = () => {
   }
 
   const poster = storageUrl(movie.poster_url || movie.poster)
-    || `https://placehold.co/400x600/12121f/e94560?text=${encodeURIComponent(movie.title)}`
+    || `https://placehold.co/400x600/12121f/2563eb?text=${encodeURIComponent(movie.title)}`
 
   const year = movie.release_date
     ? movie.release_date.slice(0, 4)
@@ -92,7 +92,7 @@ const DetailMovie = () => {
           className={`dpv2-hero__bg ${imgLoaded ? "dpv2-hero__bg--loaded" : ""}`}
           onLoad={() => setImgLoaded(true)}
           onError={(e) => {
-            e.target.src = `https://placehold.co/400x600/12121f/e94560?text=${encodeURIComponent(movie.title)}`
+            e.target.src = `https://placehold.co/400x600/12121f/2563eb?text=${encodeURIComponent(movie.title)}`
           }}
         />
         {/* Gradient overlays */}
@@ -107,7 +107,7 @@ const DetailMovie = () => {
           <span className="dpv2-topbar__title">Detail Film</span>
           <button className="dpv2-circle-btn" onClick={handleBookmark}>
             {isBookmarked
-              ? <BsBookmarkFill size={18} color="#e94560" />
+              ? <BsBookmarkFill size={18} color="var(--accent)" />
               : <BsShareFill size={18} />}
           </button>
         </div>
@@ -119,7 +119,7 @@ const DetailMovie = () => {
             alt={movie.title}
             className="dpv2-poster"
             onError={(e) => {
-              e.target.src = `https://placehold.co/200x300/12121f/e94560?text=${encodeURIComponent(movie.title)}`
+              e.target.src = `https://placehold.co/200x300/12121f/2563eb?text=${encodeURIComponent(movie.title)}`
             }}
           />
           {movie.rating && (
@@ -141,7 +141,7 @@ const DetailMovie = () => {
           </div>
           <button className="dpv2-bookmark-btn" onClick={handleBookmark}>
             {isBookmarked
-              ? <BsBookmarkFill size={22} color="#e94560" />
+              ? <BsBookmarkFill size={22} color="var(--accent)" />
               : <BsBookmarkPlus size={22} />}
           </button>
         </div>
@@ -235,10 +235,10 @@ const DetailMovie = () => {
                 >
                   <div className="dpv2-rec-card__poster">
                     <img
-                      src={storageUrl(m.poster_url || m.poster) || `https://placehold.co/150x220/12121f/e94560?text=${encodeURIComponent(m.title)}`}
+                      src={storageUrl(m.poster_url || m.poster) || `https://placehold.co/150x220/12121f/2563eb?text=${encodeURIComponent(m.title)}`}
                       alt={m.title}
                       onError={(e) => {
-                        e.target.src = `https://placehold.co/150x220/12121f/e94560?text=${encodeURIComponent(m.title)}`
+                        e.target.src = `https://placehold.co/150x220/12121f/2563eb?text=${encodeURIComponent(m.title)}`
                       }}
                     />
                     <div className="dpv2-rec-card__play">
