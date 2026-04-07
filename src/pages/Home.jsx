@@ -5,7 +5,6 @@ import { getMovies, getTrendingMovies, getNewReleases } from "../services/movieS
 import { storageUrl } from "../services/api"
 import MovieCard from "../components/MovieCard"
 import GenreList from "../components/GenreList"
-import Navbar from "../components/Navbar"
 import { BsSearch, BsBellFill, BsFillPlayFill } from "react-icons/bs"
 import { AiFillStar } from "react-icons/ai"
 
@@ -201,8 +200,6 @@ const Home = () => {
         )}
       </section>
 
-      <div style={{ height: "80px" }} />
-      <Navbar />
     </div>
   )
 }

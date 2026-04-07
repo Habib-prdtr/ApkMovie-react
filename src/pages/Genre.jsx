@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom"
 import { getMoviesByGenre, getMovies } from "../services/movieService"
 import MovieCard from "../components/MovieCard"
 import GenreList from "../components/GenreList"
-import Navbar from "../components/Navbar"
 import { BsArrowLeft } from "react-icons/bs"
 
 const Genre = () => {
@@ -73,8 +72,6 @@ const Genre = () => {
         )}
       </section>
 
-      <div style={{ height: "80px" }} />
-      <Navbar />
     </div>
   )
 }

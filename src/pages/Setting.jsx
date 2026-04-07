@@ -2,7 +2,6 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../context/AuthContext"
 import { useTheme } from "../context/ThemeContext"
-import Navbar from "../components/Navbar"
 import { BsArrowLeft, BsMoon, BsBell, BsShield, BsTrash, BsChevronRight } from "react-icons/bs"
 
 const Setting = () => {
@@ -79,8 +78,8 @@ const Setting = () => {
         <p>© 2024 CineStream. All rights reserved.</p>
       </div>
 
-      <div style={{ height: "80px" }} />
-      <Navbar />
+
+
     </div>
   )
 }

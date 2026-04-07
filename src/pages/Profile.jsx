@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom"
 import { useAuth } from "../context/AuthContext"
-import Navbar from "../components/Navbar"
 import { BsPersonCircle, BsEnvelope, BsShieldLock, BsBoxArrowRight, BsChevronRight } from "react-icons/bs"
 
 const Profile = () => {
@@ -56,8 +55,8 @@ const Profile = () => {
         <BsBoxArrowRight size={20} /> Keluar
       </button>
 
-      <div style={{ height: "80px" }} />
-      <Navbar />
+
+
     </div>
   )
 }

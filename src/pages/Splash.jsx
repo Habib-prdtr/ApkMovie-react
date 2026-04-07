@@ -54,7 +54,9 @@ const Splash = () => {
         </div>
         <div className="splash__content">
           <div className="splash__logo">
-            <BsFillPlayFill size={48} color="var(--accent)" />
+            <div className="splash__logo-icon">
+              <BsFillPlayFill size={26} color="#fff" />
+            </div>
             <h1>CineStream</h1>
           </div>
           <p className="splash__tagline">Temukan, Tonton, dan Nikmati Ribuan Film Terbaik</p>
@@ -77,7 +79,9 @@ const Splash = () => {
         <div className="splash__bg"><div className="splash__gradient" /></div>
         <div className="auth-card">
           <div className="auth-card__header">
-            <BsFillPlayFill size={36} color="var(--accent)" />
+            <div className="auth-card__logo">
+              <BsFillPlayFill size={22} color="#fff" />
+            </div>
             <h2>Selamat Datang Kembali</h2>
             <p>Masuk untuk melanjutkan menonton</p>
           </div>
@@ -128,7 +132,9 @@ const Splash = () => {
       <div className="splash__bg"><div className="splash__gradient" /></div>
       <div className="auth-card">
         <div className="auth-card__header">
-          <BsFillPlayFill size={36} color="var(--accent)" />
+          <div className="auth-card__logo">
+            <BsFillPlayFill size={22} color="#fff" />
+          </div>
           <h2>Buat Akun Baru</h2>
           <p>Bergabung dan nikmati semua fitur</p>
         </div>
@@ -172,7 +178,7 @@ const Splash = () => {
               </button>
             </div>
           </div>
-          <button type="submit" className="btn btn--primary" disabled={loading}>
+          <button type="submit" className="btn btn--primary btn--wide" disabled={loading}>
             {loading ? "Memproses..." : "Daftar"}
           </button>
         </form>

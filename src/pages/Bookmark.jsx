@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import MovieCard from "../components/MovieCard"
-import Navbar from "../components/Navbar"
 import { BsBookmarkFill } from "react-icons/bs"
 
 const Bookmark = () => {
@@ -52,8 +51,8 @@ const Bookmark = () => {
         </>
       )}
 
-      <div style={{ height: "80px" }} />
-      <Navbar />
+
+
     </div>
   )
 }

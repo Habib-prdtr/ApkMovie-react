@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { getNewReleases } from "../services/movieService"
 import MovieCard from "../components/MovieCard"
-import Navbar from "../components/Navbar"
 import { BsArrowLeft } from "react-icons/bs"
 import { MdNewReleases } from "react-icons/md"
 
@@ -65,8 +64,8 @@ const NewRelease = () => {
         </div>
       )}
 
-      <div style={{ height: "80px" }} />
-      <Navbar />
+
+
     </div>
   )
 }

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { searchMovies, getMovies } from "../services/movieService"
 import MovieCard from "../components/MovieCard"
-import Navbar from "../components/Navbar"
 import { BsSearch, BsXCircleFill } from "react-icons/bs"
 
 const Search = () => {
@@ -98,8 +97,8 @@ const Search = () => {
         </div>
       </section>
 
-      <div style={{ height: "80px" }} />
-      <Navbar />
+
+
     </div>
   )
 }

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { getTrendingMovies } from "../services/movieService"
 import MovieCard from "../components/MovieCard"
-import Navbar from "../components/Navbar"
 import { BsArrowLeft, BsFire } from "react-icons/bs"
 import { MdTrendingUp } from "react-icons/md"
 
@@ -67,8 +66,8 @@ const Trending = () => {
         </div>
       )}
 
-      <div style={{ height: "80px" }} />
-      <Navbar />
+
+
     </div>
   )
 }

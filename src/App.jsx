@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { AuthProvider, useAuth } from "./context/AuthContext"
+import Navbar from "./components/Navbar"
 import Splash from "./pages/Splash"
 import Home from "./pages/Home"
 import Search from "./pages/Search"
@@ -12,6 +13,9 @@ import Bookmark from "./pages/Bookmark"
 import Profile from "./pages/Profile"
 import Setting from "./pages/Setting"
 
+// Pages where navbar should NOT appear
+const NO_NAV_PATHS = ["/", "/watch"]
+
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth()
   if (loading) return <div className="page center"><div className="spinner" /></div>
@@ -20,23 +24,31 @@ const PrivateRoute = ({ children }) => {
 
 const AppRoutes = () => {
   const { user, loading } = useAuth()
+  const location = useLocation()
+
   if (loading) return <div className="page center"><div className="spinner" /></div>
 
+  // Show navbar on all authenticated pages except watch page and splash
+  const showNavbar = user && !NO_NAV_PATHS.some(p => location.pathname === p) && !location.pathname.startsWith("/watch")
+
   return (
-    <Routes>
-      <Route path="/" element={user ? <Navigate to="/home" replace /> : <Splash />} />
-      <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
-      <Route path="/search" element={<PrivateRoute><Search /></PrivateRoute>} />
-      <Route path="/movie/:id" element={<PrivateRoute><DetailMovie /></PrivateRoute>} />
-      <Route path="/watch/:id" element={<PrivateRoute><WatchMovie /></PrivateRoute>} />
-      <Route path="/trending" element={<PrivateRoute><Trending /></PrivateRoute>} />
-      <Route path="/new-release" element={<PrivateRoute><NewRelease /></PrivateRoute>} />
-      <Route path="/genre" element={<PrivateRoute><Genre /></PrivateRoute>} />
-      <Route path="/bookmark" element={<PrivateRoute><Bookmark /></PrivateRoute>} />
-      <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
-      <Route path="/settings" element={<PrivateRoute><Setting /></PrivateRoute>} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={user ? <Navigate to="/home" replace /> : <Splash />} />
+        <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+        <Route path="/search" element={<PrivateRoute><Search /></PrivateRoute>} />
+        <Route path="/movie/:id" element={<PrivateRoute><DetailMovie /></PrivateRoute>} />
+        <Route path="/watch/:id" element={<PrivateRoute><WatchMovie /></PrivateRoute>} />
+        <Route path="/trending" element={<PrivateRoute><Trending /></PrivateRoute>} />
+        <Route path="/new-release" element={<PrivateRoute><NewRelease /></PrivateRoute>} />
+        <Route path="/genre" element={<PrivateRoute><Genre /></PrivateRoute>} />
+        <Route path="/bookmark" element={<PrivateRoute><Bookmark /></PrivateRoute>} />
+        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+        <Route path="/settings" element={<PrivateRoute><Setting /></PrivateRoute>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      {showNavbar && <Navbar />}
+    </>
   )
 }
 
